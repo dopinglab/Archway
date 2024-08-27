@@ -7,24 +7,22 @@ sudo apt install -y curl git jq lz4 build-essential
 ```
 
 **Install Go**
+```
 sudo rm -rf /usr/local/go
 curl -L https://go.dev/dl/go1.21.6.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
 source .bash_profile
-Node Installation
+```
 
-Node Name
+**Node Installation**
 
-Your Node Name
-Port prefix
-
-115
-# Clone project repository
+Clone project repository
+```
 cd && rm -rf archway
 git clone https://github.com/archway-network/archway
 cd archway
 git checkout v7.0.1
-
+``` 
 # Build binary
 make install
 
