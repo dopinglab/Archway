@@ -23,13 +23,17 @@ git clone https://github.com/archway-network/archway
 cd archway
 git checkout v7.0.1
 ``` 
-# Build binary
+**Build binary**
+```
 make install
+```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 archwayd config chain-id archway-1
 archwayd config keyring-backend file
 archwayd config node tcp://localhost:11557
+```
 
 # Initialize the node
 archwayd init "Your Node Name" --chain-id archway-1
