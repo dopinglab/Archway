@@ -35,10 +35,12 @@ archwayd config keyring-backend file
 archwayd config node tcp://localhost:11557
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 archwayd init "Your Node Name" --chain-id archway-1
+```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
 curl -L https://snapshots.nodejumper.io/archway/genesis.json > $HOME/.archway/config/genesis.json
 curl -L https://snapshots.nodejumper.io/archway/addrbook.json > $HOME/.archway/config/addrbook.json
 
