@@ -44,8 +44,10 @@ archwayd init "Your Node Name" --chain-id archway-1
 curl -L https://snapshots.nodejumper.io/archway/genesis.json > $HOME/.archway/config/genesis.json
 curl -L https://snapshots.nodejumper.io/archway/addrbook.json > $HOME/.archway/config/addrbook.json
 
-# Set seeds
+**Set seeds**
+```
 sed -i -e 's|^seeds *=.*|seeds = "3ba7bf08f00e228026177e9cdc027f6ef6eb2b39@35.232.234.58:26656,b308dda41e4db2ee00852d91846f981c49943d46@161.97.96.91:46656,c28827cb96c14c905b127b92065a3fb4cd77d7f6@seeds.whispernode.com:11556,ebc272824924ea1a27ea3183dd0b9ba713494f83@archway-mainnet-seed.autostake.com:26946,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:11556,b6c1198fa025ce24d26d90527c5d2b71f9399756@seed-node.mms.team:34656,6471ac9ff8474373e8055d45b6246fd8c5204890@archway.seed.mzonder.com:10756,261acb73f483d1cace653cb54f7b8815f63b7e56@archway.lgns.net:26656,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@archway.rpc.kjnodes.com:15659,bd9332cd0a99f5830ea457a32a56b32790f68716@135.181.58.28:27456"|' $HOME/.archway/config/config.toml
+```
 
 # Set minimum gas price
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "196000000000aarch"|' $HOME/.archway/config/app.toml
