@@ -41,8 +41,10 @@ archwayd init "Your Node Name" --chain-id archway-1
 ```
 
 **Download genesis and addrbook files**
+```
 curl -L https://snapshots.nodejumper.io/archway/genesis.json > $HOME/.archway/config/genesis.json
 curl -L https://snapshots.nodejumper.io/archway/addrbook.json > $HOME/.archway/config/addrbook.json
+```
 
 **Set seeds**
 ```
