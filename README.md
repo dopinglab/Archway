@@ -56,12 +56,14 @@ sed -i -e 's|^seeds *=.*|seeds = "3ba7bf08f00e228026177e9cdc027f6ef6eb2b39@35.23
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "196000000000aarch"|' $HOME/.archway/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.archway/config/app.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:11517%; s%:8080%:11580%; s%:9090%:11590%; s%:9091%:11591%; s%:8545%:11545%; s%:8546%:11546%; s%:6065%:11565%" $HOME/.archway/config/app.toml
