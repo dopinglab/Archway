@@ -71,8 +71,10 @@ sed -i -e "s%:1317%:11517%; s%:8080%:11580%; s%:9090%:11590%; s%:9091%:11591%; s
 sed -i -e "s%:26658%:11558%; s%:26657%:11557%; s%:6060%:11560%; s%:26656%:11556%; s%:26660%:11561%" $HOME/.archway/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots.nodejumper.io/archway/archway_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.archway"
+```
 
 # Create a service
 sudo tee /etc/systemd/system/archwayd.service > /dev/null << EOF
