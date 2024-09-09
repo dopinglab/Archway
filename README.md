@@ -76,7 +76,8 @@ sed -i -e "s%:26658%:11558%; s%:26657%:11557%; s%:6060%:11560%; s%:26656%:11556%
 curl "https://snapshots.nodejumper.io/archway/archway_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.archway"
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/archwayd.service > /dev/null << EOF
 [Unit]
 Description=Archway node service
@@ -92,6 +93,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable archwayd.service
+```
 
 # Start the service and check the logs
 sudo systemctl start archwayd.service
