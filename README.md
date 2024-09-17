@@ -126,17 +126,18 @@ mkdir /home/admin/.ssh
 echo "YOUR_PUBLIC_SSH_KEY" >> /home/admin/.ssh/authorized_keys
 sudo chown admin: /home/admin/.ssh
 sudo chown admin: /home/admin/.ssh/authorized_keys
-```
 
 echo "admin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+```
 
-# disable root login, disable password authentication, use ssh keys only
+**disable root login, disable password authentication, use ssh keys only**
+```
 sudo sed -i 's|^PermitRootLogin .*|PermitRootLogin no|' /etc/ssh/sshd_config
 sudo sed -i 's|^ChallengeResponseAuthentication .*|ChallengeResponseAuthentication no|' /etc/ssh/sshd_config
 sudo sed -i 's|^#PasswordAuthentication .*|PasswordAuthentication no|' /etc/ssh/sshd_config
 sudo sed -i 's|^#PermitEmptyPasswords .*|PermitEmptyPasswords no|' /etc/ssh/sshd_config
 sudo sed -i 's|^#PubkeyAuthentication .*|PubkeyAuthentication yes|' /etc/ssh/sshd_config
-
+```
 sudo systemctl restart sshd
 
 # install fail2ban
