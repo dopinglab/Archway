@@ -137,11 +137,14 @@ sudo sed -i 's|^ChallengeResponseAuthentication .*|ChallengeResponseAuthenticati
 sudo sed -i 's|^#PasswordAuthentication .*|PasswordAuthentication no|' /etc/ssh/sshd_config
 sudo sed -i 's|^#PermitEmptyPasswords .*|PermitEmptyPasswords no|' /etc/ssh/sshd_config
 sudo sed -i 's|^#PubkeyAuthentication .*|PubkeyAuthentication yes|' /etc/ssh/sshd_config
-```
-sudo systemctl restart sshd
 
-# install fail2ban
+sudo systemctl restart sshd
+```
+
+**install fail2ban**
+```
 sudo apt install -y fail2ban
+```
 
 # install and configure firewall
 sudo apt install -y ufw
