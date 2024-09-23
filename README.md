@@ -159,8 +159,9 @@ sudo ufw allow 26656
 **make sure you expose ALL necessary ports, only after that enable firewall**
 ```
 sudo ufw enable
+```
 
-# make terminal colorful
+**make terminal colorful**
 sudo su - admin
 source <(curl -s https://raw.githubusercontent.com/nodejumper-org/cosmos-scripts/master/utils/enable_colorful_bash.sh)
 
